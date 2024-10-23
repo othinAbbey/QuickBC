@@ -1,6 +1,10 @@
 const hre = require("hardhat");
 
 async function main() {
+     // Set up the provider with QuickNode Celo RPC endpoint
+     const provider = new ethers.providers.JsonRpcProvider("https://alfajores-forno.celo-testnet.org");
+     const wallet = new ethers.Wallet(process.env.CELO_PRIVATE_KEY, provider);
+
     // Deploy UserRegistration contract
     const UserRegistration = await hre.ethers.getContractFactory("UserRegistration");
     const userRegistration = await UserRegistration.deploy();

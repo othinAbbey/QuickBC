@@ -505,5 +505,266 @@ Source: Conversation with Copilot, 10/19/2024
 (5) How to Create a REST API Add-On for Marketplace | QuickNode. https://www.quicknode.com/guides/quicknode-products/marketplace/how-to-create-a-rest-api-add-on-for-marketplace.
 (6) QuickNode Solana RPC Overview | QuickNode. https://www.quicknode.com/docs/solana.
 
+
+
+/////////////////////////////////////
+
+## Project Alignment with QuickNode Products
+
+**Title**: Blockchain-Based SMS and USSD Services for Real-World Solutions in Africa
+
+**Overview**: This project leverages the Celo blockchain to provide accessible and secure SMS and USSD services, enabling users in regions with limited internet access to interact with blockchain applications. QuickNode's suite of products and services will be integral to the development and deployment of this project.
+
+### QuickNode Products and Their Alignment
+
+1. **Celo RPC Endpoints**
+   - **Description**: QuickNode provides robust support for Celo RPC endpoints, allowing seamless interaction with the Celo blockchain.
+   - **Alignment**: Your project will utilize these endpoints to deploy and manage smart contracts, ensuring reliable and efficient blockchain interactions.
+
+2. **Elastic APIs**
+   - **Description**: QuickNode offers elastic APIs that can handle high volumes of requests, ensuring scalability.
+   - **Alignment**: The SMS and USSD services will rely on these APIs to manage large numbers of transactions and user interactions, ensuring the system can scale as needed.
+
+3. **Powerful Tools & Analytics**
+   - **Description**: QuickNode provides tools and analytics to monitor and optimize blockchain interactions.
+   - **Alignment**: These tools will help you monitor the performance and security of your services, allowing for continuous improvement and reliability.
+
+4. **Low Latency Network**
+   - **Description**: QuickNode's global network is optimized for low latency, providing fast and responsive interactions.
+   - **Alignment**: Low latency is crucial for SMS and USSD transactions to ensure a smooth user experience, making QuickNode's network an ideal choice.
+
+5. **Support for Multiple Programming Languages**
+   - **Description**: QuickNode supports various programming languages and Web3 SDKs, making integration easier.
+   - **Alignment**: This flexibility allows you to use the best tools and languages for your project, ensuring efficient development and deployment.
+
+6. **GoldRush Wallet API**
+   - **Description**: Fetch multichain ERC20, NFT, and native token balances and transfers. Useful for building wallets, portfolio trackers, token gating, and airdrop snapshots. Supports 100+ chains.
+   - **Alignment**: This API will help manage user wallets and track token balances, enhancing the functionality of your SMS and USSD services.
+
+7. **GoldRush Transactions API**
+   - **Description**: Fetch multichain transaction histories for wallets and contracts with decoded event logs and traces. Useful for building wallet activity feeds, crypto tax, and accounting tools.
+   - **Alignment**: This API will provide detailed transaction histories, aiding in transparency and user trust.
+
+8. **Flipside LiveQuery**
+   - **Description**: Offers real-time blockchain data queries, which can be helpful for monitoring transactions and smart contract interactions.
+   - **Alignment**: This tool will enable real-time monitoring and analytics, ensuring your services run smoothly and efficiently.
+
+9. **Endpoint Armor**
+   - **Description**: Adds security features to your endpoints, protecting against common vulnerabilities.
+   - **Alignment**: This will enhance the security of your endpoints, crucial for protecting user data and transactions.
+
+10. **Foresight API (Beta)**
+    - **Description**: Provides insights before executing a transaction, helping you understand what the transaction will do.
+    - **Alignment**: This API will help users understand the impact of their transactions before they execute them, improving user experience and trust.
+
+11. **Translate API (Beta)**
+    - **Description**: Deciphers raw blockchain data and categorizes transactions into standard types.
+    - **Alignment**: This will help users understand the outcomes of their transactions, making the service more user-friendly.
+
+### Project Goals and QuickNode Products
+
+1. **Accessibility**
+   - **Goal**: Provide blockchain services to users without internet access through SMS and USSD.
+   - **QuickNode Support**: Celo RPC endpoints and elastic APIs will ensure reliable and scalable access to blockchain services.
+
+2. **Security**
+   - **Goal**: Ensure secure transactions and data handling using blockchain technology.
+   - **QuickNode Support**: QuickNode's powerful tools and analytics, along with Endpoint Armor, will help monitor and maintain the security of your services.
+
+3. **Scalability**
+   - **Goal**: Develop a scalable solution that can be expanded to various regions and use cases.
+   - **QuickNode Support**: Elastic APIs and a low latency network will support the scalability of your project.
+
+4. **User Education**
+   - **Goal**: Educate users on the benefits and usage of blockchain technology through easy-to-use interfaces.
+   - **QuickNode Support**: The support for multiple programming languages and Web3 SDKs will facilitate the development of user-friendly interfaces.
+
+### Development Cycle and QuickNode Integration
+
+1. **Planning**
+   - Define project scope and requirements.
+   - Identify key stakeholders and assign roles.
+   - Create a project timeline with milestones.
+
+2. **Design**
+   - Design smart contracts for the Celo blockchain.
+   - Develop wireframes and prototypes for SMS/USSD interfaces.
+   - Plan backend architecture for integrating blockchain with SMS/USSD services.
+
+3. **Development**
+   - Write and deploy smart contracts on the Celo blockchain using QuickNode's Celo RPC endpoints.
+   - Develop backend services to handle SMS/USSD requests and interact with the blockchain using QuickNode's elastic APIs.
+   - Implement frontend interfaces for web and mobile applications.
+
+4. **Testing**
+   - Conduct unit and integration testing for smart contracts.
+   - Perform manual testing of endpoints to ensure they function correctly and securely.
+   - Use Flipside LiveQuery for real-time monitoring and analytics during testing phases.
+
+### Controller description
+Sure! Here's a detailed documentation of each controller, including its purpose and description:
+
+### 1. Login Controller
+
+**Purpose**: Handles user login requests via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/ussd-login` or `/sms-login`
+- **Method**: `POST`
+- **Functionality**: Authenticates users by verifying their phone number and PIN, and generates a session token upon successful login.
+
+### 2. Logout Controller
+
+**Purpose**: Handles user logout requests via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/ussd-logout` or `/sms-logout`
+- **Method**: `POST`
+- **Functionality**: Invalidates the user's session token, effectively logging them out of the system.
+
+### 3. Session Validation Controller
+
+**Purpose**: Validates the user's session token via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/validate-ussd-session` or `/validate-sms-session`
+- **Method**: `POST`
+- **Functionality**: Checks if the user's session token is still active and valid.
+
+### 4. User Registration Controller
+
+**Purpose**: Registers a new user via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/ussd-register` or `/sms-register`
+- **Method**: `POST`
+- **Functionality**: Collects the user's phone number and PIN to create a new user account.
+
+### 5. User Profile Controller
+
+**Purpose**: Manages user profile information via USSD or SMS.
+
+**Description**: 
+- **Endpoints**:
+  - **Get User Profile**: `/ussd-profile` or `/sms-profile`
+  - **Update User Profile**: `/ussd-update-profile` or `/sms-update-profile`
+- **Method**: `POST`
+- **Functionality**: Retrieves and updates user profile information such as name and email.
+
+### 6. Transaction Controller
+
+**Purpose**: Manages sending and receiving transactions via USSD or SMS.
+
+**Description**: 
+- **Endpoints**:
+  - **Send Transaction**: `/ussd-send-transaction` or `/sms-send-transaction`
+  - **Get Transaction Status**: `/ussd-transaction-status` or `/sms-transaction-status`
+- **Method**: `POST`
+- **Functionality**: Initiates transactions and checks their status.
+
+### 7. Balance Inquiry Controller
+
+**Purpose**: Retrieves the balance of a user's account via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/ussd-balance` or `/sms-balance`
+- **Method**: `POST`
+- **Functionality**: Provides the current balance of the user's account.
+
+### 8. Notification Controller
+
+**Purpose**: Sends notifications to users via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/ussd-notify` or `/sms-notify`
+- **Method**: `POST`
+- **Functionality**: Sends notifications to users about various events or updates.
+
+### 9. Password Reset Controller
+
+**Purpose**: Handles password reset requests via USSD or SMS.
+
+**Description**: 
+- **Endpoints**:
+  - **Request Password Reset**: `/ussd-request-reset` or `/sms-request-reset`
+  - **Confirm Password Reset**: `/ussd-confirm-reset` or `/sms-confirm-reset`
+- **Method**: `POST`
+- **Functionality**: Manages the process of requesting and confirming password resets.
+
+### 10. Transaction History Controller
+
+**Purpose**: Retrieves a user's transaction history via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/ussd-transaction-history` or `/sms-transaction-history`
+- **Method**: `POST`
+- **Functionality**: Provides a list of past transactions for the user.
+
+### 11. Support/Help Controller
+
+**Purpose**: Provides users with support or help information via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/ussd-help` or `/sms-help`
+- **Method**: `POST`
+- **Functionality**: Delivers support or help information to users.
+
+### 12. Crowdfunding Controller
+
+**Purpose**: Manages crowdfunding campaigns via USSD or SMS.
+
+**Description**: 
+- **Endpoints**:
+  - **Create Campaign**: `/ussd-create-campaign` or `/sms-create-campaign`
+  - **Contribute to Campaign**: `/ussd-contribute-campaign` or `/sms-contribute-campaign`
+  - **Check Campaign Status**: `/ussd-campaign-status` or `/sms-campaign-status`
+- **Method**: `POST`
+- **Functionality**: Creates campaigns, allows contributions, and checks campaign status.
+
+### 13. Crypto Exchange Controller
+
+**Purpose**: Facilitates cryptocurrency exchanges via USSD or SMS.
+
+**Description**: 
+- **Endpoints**:
+  - **Initiate Exchange**: `/ussd-initiate-exchange` or `/sms-initiate-exchange`
+  - **Check Exchange Rate**: `/ussd-exchange-rate` or `/sms-exchange-rate`
+- **Method**: `POST`
+- **Functionality**: Initiates exchanges and checks exchange rates.
+
+### 14. Airtime Purchase Controller
+
+**Purpose**: Handles the purchase of airtime via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/ussd-purchase-airtime` or `/sms-purchase-airtime`
+- **Method**: `POST`
+- **Functionality**: Processes airtime purchase requests.
+
+### 15. Service Payment Controller
+
+**Purpose**: Handles payments for various services via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/ussd-service-payment` or `/sms-service-payment`
+- **Method**: `POST`
+- **Functionality**: Processes payments for services.
+
+### 16. Lock Controller
+
+**Purpose**: Manages locking and unlocking of funds or assets via USSD or SMS.
+
+**Description**: 
+- **Endpoint**: `/ussd-lock` or `/sms-lock`
+- **Method**: `POST`
+- **Functionality**: Locks and unlocks funds or assets.
+
+This documentation provides a comprehensive overview of each controller, its purpose, and its functionality. If you need further details or have any specific questions, feel free to ask!
+
+Source: Conversation with Copilot, 10/21/2024
+(1) Document Controller Job Description [Updated for 2024]. https://interviewguy.com/document-controller-job-description/.
+(2) Document Controller Job Description: Salary, Skills, & More. https://resumehead.com/blog/document-controller-job-description.
+(3) Document Controller Job Description and Definition. https://blog.duloit.com/document-control/document-controller-job-description/.
+(4) Document Controller Job Description - Betterteam. https://www.betterteam.com/document-controller-job-description.
 #### Challenges
 Varying versions of hardhart packages

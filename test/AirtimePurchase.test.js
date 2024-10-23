@@ -1,5 +1,7 @@
-const { expect } = require("chai");
-const { ethers } = require("hardhat");
+import chaiPkg from 'chai';
+const { expect } = chaiPkg;
+import hardhatPkg from 'hardhat';
+const { ethers } = hardhatPkg;
 
 describe("AirtimePurchase Contract", function () {
     let airtimePurchase;

@@ -23,7 +23,7 @@
     "chai-as-promised": "^8.0.0",
     "chai-ethers": "^0.0.1",
     "ethereum-waffle": "^4.0.10",
-    "ethers": "^5.0.0",
+    "ethers": "^5.7.2",
     "hardhat": "^2.22.13",
     "hardhat-gas-reporter": "^1.0.8",
     "solidity-coverage": "^0.8.1",
@@ -35,9 +35,12 @@
   },
   "keywords": [],
   "author": "",
+  "type": "module",
   "license": "ISC",
-  "dependencies": {
+    "dependencies": {
     "@celo/contractkit": "^8.3.0",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.2",
+    "web3": "^4.14.0"
   }
 }
