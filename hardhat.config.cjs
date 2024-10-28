@@ -7,7 +7,7 @@ module.exports = {
   solidity: "0.8.27",
   networks: {
     alfajores: {
-      url: 'https://alfajores-forno.celo-testnet.org',
+      url: 'https://alfajores-forno.celo.org',
       accounts: [`0x${process.env.CELO_PRIVATE_KEY}`]  // use private key here, not account address
     },
     celo: {

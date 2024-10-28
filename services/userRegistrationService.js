@@ -1,10 +1,7 @@
-// require('dotenv').config();
-// // import userRegistration from '../artifacts/contracts/UserRegistration.sol/UserRegistration.json' assert { type: 'json' };
-// const { quickNodeApiUrl } = require('../config.js');
-// const userRegistration = require('../artifacts/contracts/UserRegistration.sol/UserRegistration.json');
-// const { ethers } = require('ethers');
-// // import { ethers } from 'ethers';
-// // import { quickNodeApiUrl } from '../config.js';
+// import 'dotenv/config';
+// import userRegistration from '../artifacts/contracts/UserRegistration.sol/UserRegistration.json' assert { type: 'json' };
+// import { ethers } from 'ethers';
+// import { quickNodeApiUrl } from '../config.js';
 
 // const provider = new ethers.providers.JsonRpcProvider(quickNodeApiUrl);
 // const privateKey = process.env.CELO_PRIVATE_KEY;
@@ -16,7 +13,7 @@
 // const wallet = new ethers.Wallet(privateKey, provider);
 
 // const { abi } = userRegistration;
-// const userRegistrationAddress = process.env.UserRegistration_ADDRESS; // Replace with your deployed contract address
+// const userRegistrationAddress = process.env.UserRegistration_ADRESS; // Replace with your deployed contract address
 // const userRegistrationContract = new ethers.Contract(userRegistrationAddress, abi, wallet);
 
 // const registerUserService = async (name, phoneNumber) => {
@@ -43,7 +40,6 @@
 // export { registerUserService, getUserDetails };
 
 
-
 import 'dotenv/config';
 import userRegistration from '../artifacts/contracts/UserRegistration.sol/UserRegistration.json' assert { type: 'json' };
 import { ethers } from 'ethers';
@@ -62,9 +58,9 @@ const { abi } = userRegistration;
 const userRegistrationAddress = process.env.UserRegistration_ADRESS; // Replace with your deployed contract address
 const userRegistrationContract = new ethers.Contract(userRegistrationAddress, abi, wallet);
 
-const registerUserService = async (name, phoneNumber) => {
+const registerUserService = async (name, phoneNumber, pin) => {
   try {
-    const tx = await userRegistrationContract.registerUser(name, phoneNumber);
+    const tx = await userRegistrationContract.registerUser(name, phoneNumber, pin);
     await tx.wait();
     return tx;
   } catch (error) {
@@ -75,7 +71,7 @@ const registerUserService = async (name, phoneNumber) => {
 
 const getUserDetails = async (userId) => {
   try {
-    const userDetails = await userRegistrationContract.getUserDetails(userId);
+    const userDetails = await userRegistrationContract.getUserInfo(userId);
     return userDetails;
   } catch (error) {
     console.error('Error fetching user details:', error);

@@ -226,18 +226,7 @@ This documentation provides a detailed guide on integrating various QuickNode Ma
    npm install @jup-ag/core
    ```
 2. **Use**:
-   ```javascript
-   const Jupiter = require('@jup-ag/core');
-   const jupiter = new Jupiter({ apiKey: 'your-api-key' });
-
-   function handleSwapRequest(userInput) {
-     jupiter.swap(userInput).then(response => {
-       sendSMS(userPhoneNumber, `Swap successful: ${response.details}`);
-     }).catch(error => {
-       sendSMS(userPhoneNumber, `Swap failed: ${error.message}`);
-     });
-   }
-   ```
+  
 
 ---
 
@@ -255,18 +244,7 @@ This documentation provides a detailed guide on integrating various QuickNode Ma
    npm install flipside
    ```
 2. **Use**:
-   ```javascript
-   const Flipside = require('flipside');
-   const flipside = new Flipside({ apiKey: 'your-api-key' });
-
-   function handleDataRequest(userInput) {
-     flipside.query(`SELECT * FROM transactions WHERE id = '${userInput}'`).then(response => {
-       sendSMS(userPhoneNumber, `Transaction details: ${response.data}`);
-     }).catch(error => {
-       sendSMS(userPhoneNumber, `Error fetching data: ${error.message}`);
-     });
-   }
-   ```
+  
 
 ---
 
@@ -298,20 +276,7 @@ This documentation provides a detailed guide on integrating various QuickNode Ma
    npm install blink-gas-recovery
    ```
 2. **Use**:
-   ```javascript
-   const Blink = require('blink-gas-recovery');
-   const blink = new Blink({ apiKey: 'your-api-key' });
 
-   function handleTransaction(userInput) {
-     blink.optimizeTransaction(userInput).then(response => {
-       sendSMS(userPhoneNumber, `Transaction optimized: ${response.details}`);
-     }).catch(error => {
-       sendSMS(userPhoneNumber, `Transaction failed: ${error.message}`);
-     });
-   }
-   ```
-
----
 
 ## 5. Token and NFT API v2 Bundle
 
@@ -327,18 +292,7 @@ This documentation provides a detailed guide on integrating various QuickNode Ma
    npm install token-nft-api
    ```
 2. **Use**:
-   ```javascript
-   const TokenNFTAPI = require('token-nft-api');
-   const api = new TokenNFTAPI({ apiKey: 'your-api-key' });
 
-   function handleTokenRequest(userInput) {
-     api.getTokenData(userInput).then(response => {
-       sendSMS(userPhoneNumber, `Token details: ${response.data}`);
-     }).catch(error => {
-       sendSMS(userPhoneNumber, `Error fetching data: ${error.message}`);
-     });
-   }
-   ```
 
 ---
 
@@ -356,18 +310,7 @@ This documentation provides a detailed guide on integrating various QuickNode Ma
    npm install ordinals-runes-api
    ```
 2. **Use**:
-   ```javascript
-   const OrdinalsAPI = require('ordinals-runes-api');
-   const api = new OrdinalsAPI({ apiKey: 'your-api-key' });
-
-   function handleOrdinalsRequest(userInput) {
-     api.getInscriptions(userInput).then(response => {
-       sendSMS(userPhoneNumber, `Ordinals details: ${response.data}`);
-     }).catch(error => {
-       sendSMS(userPhoneNumber, `Error fetching data: ${error.message}`);
-     });
-   }
-   ```
+  
 
 ---
 
@@ -385,18 +328,7 @@ This documentation provides a detailed guide on integrating various QuickNode Ma
    npm install mistrack-risk-scores
    ```
 2. **Use**:
-   ```javascript
-   const Mistrack = require('mistrack-risk-scores');
-   const api = new Mistrack({ apiKey: 'your-api-key' });
-
-   function handleRiskScoreRequest(userInput) {
-     api.getRiskScore(userInput).then(response => {
-       sendSMS(userPhoneNumber, `Risk score: ${response.score}`);
-     }).catch(error => {
-       sendSMS(userPhoneNumber, `Error fetching risk score: ${error.message}`);
-     });
-   }
-   ```
+  
 
 ---
 
@@ -413,18 +345,7 @@ This documentation provides a detailed guide on integrating various QuickNode Ma
    ```bash
    npm install coinapi-sdk
    ```
-2. **Use**:
-   ```javascript
-   const CoinAPI = require('coinapi-sdk');
-   const api = new CoinAPI({ apiKey: 'your-api-key' });
-
-   function handleMarketDataRequest(userInput) {
-     api.getMarketData(userInput).then(response => {
-       sendSMS(userPhoneNumber, `Market data: ${response.data}`);
-     }).catch(error => {
-       sendSMS(userPhoneNumber, `Error fetching market data: ${error.message}`);
-     });
-   }
+2. 
    ```
 
 ---
@@ -442,19 +363,7 @@ This documentation provides a detailed guide on integrating various QuickNode Ma
    ```bash
    npm install tenderly-sdk
    ```
-2. **Use**:
-   ```javascript
-   const Tenderly = require('tenderly-sdk');
-   const api = new Tenderly({ apiKey: 'your-api-key' });
-
-   function handleSimulationRequest(userInput) {
-     api.simulateTransaction(userInput).then(response => {
-       sendSMS(userPhoneNumber, `Simulation result: ${response.details}`);
-     }).catch(error => {
-       sendSMS(userPhoneNumber, `Simulation failed: ${error.message}`);
-     });
-   }
-   ```
+2.
 
 ---
 
@@ -471,19 +380,7 @@ This documentation provides a detailed guide on integrating various QuickNode Ma
    ```bash
    npm install blockspan-nft-api
    ```
-2. **Use**:
-   ```javascript
-   const BlockSpan = require('blockspan-nft-api');
-   const api = new BlockSpan({ apiKey: 'your-api-key' });
-
-   function handleNFTRequest(userInput) {
-     api.getNFTMetadata(userInput).then(response => {
-       sendSMS(userPhoneNumber, `NFT details: ${response.data}`);
-     }).catch(error => {
-       sendSMS(userPhoneNumber, `Error fetching NFT data: ${error.message}`);
-     });
-   }
-   ```
+2. 
 
 ---
 
