@@ -1,17 +1,12 @@
-const users = [
-    { phoneNumber: '1234567890', balance: 1000 },
-    { phoneNumber: '0987654321', balance: 500 }
-  ];
-  
-  // Function to get user balance
-  const getUserBalance = (phoneNumber) => {
-    const user = users.find(u => u.phoneNumber === phoneNumber);
-    if (user) {
-      return { phoneNumber: user.phoneNumber, balance: user.balance };
-    } else {
-      throw new Error('User not found');
-    }
-  };
-  
-  export { getUserBalance };
-  
+
+// balanceInquiryService.js
+const getUserBalance = async (phoneNumber) => {
+  // Logic to interact with the blockchain and get the balance
+  // This is a placeholder, replace with actual blockchain interaction code
+  const balance = await blockchain.getBalance(phoneNumber);
+  return balance;
+};
+
+
+
+export { getUserBalance };

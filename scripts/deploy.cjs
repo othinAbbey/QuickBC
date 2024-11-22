@@ -2,15 +2,14 @@ const { ethers } = require("hardhat");
 
 async function main() {
   // Set up the provider with QuickNode Celo RPC endpoint
-  // const provider = new ethers.providers.JsonRpcProvider("https://alfajores-forno.celo-testnet.org");
   const provider = new ethers.providers.JsonRpcProvider("https://alfajores-forno.celo.org");
   const wallet = new ethers.Wallet(process.env.CELO_PRIVATE_KEY, provider);
 
-  // Deploy UserRegistration contract
-  const UserRegistration = await ethers.getContractFactory("UserRegistration");
-  const userRegistration = await UserRegistration.deploy();
-  await userRegistration.deployed();
-  console.log("UserRegistration deployed to:", userRegistration.address);
+  // Deploy UserManagement contract
+  const UserManagement = await ethers.getContractFactory("UserManagement");
+  const userManagement = await UserManagement.deploy();
+  await userManagement.deployed();
+  console.log("UserManagement deployed to:", userManagement.address);
 
   // Deploy Transaction contract
   const Transaction = await ethers.getContractFactory("Transaction");
@@ -47,7 +46,7 @@ async function main() {
   // const stablecoinAddress = "0x..."; // Replace with actual stablecoin contract address
   // const bitcoinAddress = "0x..."; // Replace with actual Bitcoin token contract address
   // const CryptoExchange = await ethers.getContractFactory("CryptoExchange");
-  // const cryptoExchange = await CryptoExchange.deploy(stablecoinAddress, bitcoinAddress);
+  // const cryptoExchange = await cryptoExchange.deploy(stablecoinAddress, bitcoinAddress);
   // await cryptoExchange.deployed();
   // console.log("CryptoExchange deployed to:", cryptoExchange.address);
 }

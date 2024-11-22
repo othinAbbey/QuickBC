@@ -1,8 +1,10 @@
-import { Router } from 'express';
-import { registerUser, getUserDetails} from '../controllers/registrationController.js';
+import express from 'express';
+import { getUserAccount, createUserAccount } from '../controllers/userController.js';
+import { checkUserRegistration } from '../middleware/userManagement/checkUserRegistration.js';
+const router = express.Router();
 
-const router = Router();
-router.post('/register', registerUser);
-router.get('/user/:userId', getUserDetails);
+router.get('/user/:phoneNumber', getUserAccount);
+router.post('/user', createUserAccount);
 
 export default router;
+

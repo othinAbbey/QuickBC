@@ -1,8 +1,15 @@
-import { registerUserService, getUserDetails } from '../services/userRegistrationService.js';
+import { registerUserService} from '../services/userRegistrationService.js';
+import { getUserAccount } from '../services/accountService.js';
 
 async function registerUser(req, res) {
   const { name, phoneNumber, pin } = req.body;
   try {
+    // Check if the user is already registered
+    const existingUser = await getUserAccount(phoneNumber);
+    if (existingUser) {
+      return res.status(400).json({ message: 'User already registered.' });
+    }
+
     // Call the service to register the user
     const result = await registerUserService(name, phoneNumber, pin);
     
