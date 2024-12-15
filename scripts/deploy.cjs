@@ -34,6 +34,12 @@ async function main() {
   const airtimePurchase = await AirtimePurchase.deploy();
   await airtimePurchase.deployed();
   console.log("AirtimePurchase deployed to:", airtimePurchase.address);
+  // // Deploy Registeruser
+  // const RegisterUser = await ethers.getContractFactory("RegisterUser");
+  // const registerUser = await RegisterUser.deploy();
+  // await registerUser.deployed();
+  // console.log("RegisterUser deployed to:", registerUser.address);
+
 
   // Uncomment and update the following lines if you need to deploy these contracts
   // Deploy Crowdfunding contract
