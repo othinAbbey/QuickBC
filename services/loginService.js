@@ -3,7 +3,7 @@ const { sign } = pkg;
 
 // Mock user data
 const users = [
-  { phoneNumber: '1234567890', pin: '1234' },
+  { phoneNumber: '0775824543', pin: '1234' },
   { phoneNumber: '0987654321', pin: '5678' }
 ];
 

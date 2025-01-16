@@ -37,7 +37,3 @@ main()
         console.error(error);
         process.exit(1);
     });
-//   const CryptoExchange = await ethers.getContractFactory("CryptoExchange");
-//   const cryptoExchange = await CryptoExchange.deploy();
-//   await cryptoExchange.deployed();
-//   console.log("CryptoExchange deployed to:", cryptoExchange.address);
